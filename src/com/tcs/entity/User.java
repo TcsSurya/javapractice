@@ -22,5 +22,13 @@ public class User {
 	}
 	private long moblieNumber;
 	private byte age;
-
+	@Override
+	public String toString() {
+		return "[name="+name+"]";
+	}
+	
+	public void workout() {
+		System.out.println(name +" is working out...");
+	}
+	
 }
