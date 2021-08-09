@@ -2,7 +2,7 @@ package com.tcs.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.*;
+
 
 public class Gymnasium {
 	static List<User> users = new ArrayList<User>();
@@ -16,6 +16,7 @@ public class Gymnasium {
 			User user = new User();
 			user.setName("Ram"+i);
 			user.setAge((byte)(10+i));
+			users.add(user);
 		}
 		System.out.println(users);
 		users.get(0).workout();
