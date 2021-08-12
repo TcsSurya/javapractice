@@ -12,8 +12,16 @@ public class ArrayListDemo {
 		System.out.println(numbers);
 //		shortList(numbers);
 //		filterList(numbers);
-		add(numbers);
+//		add(numbers);
 //		System.out.println("after sorging="+numbers);
+		otherOps(numbers);
+	}
+	private static void otherOps(List<Integer> numbers) {
+		System.out.println(numbers);
+		numbers.add(1,50);
+		System.out.println(numbers);
+		// TODO Auto-generated method stub
+		
 	}
 	private static void add(List<Integer> numbers) {
 		Optional<Integer> sum1 = numbers.stream()
