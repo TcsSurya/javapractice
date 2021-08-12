@@ -1,6 +1,8 @@
 package com.tcs.set.example;
 
-public class User {
+import java.lang.Comparable;
+
+public class User implements Comparable {
 	private String name;
 	private int age;
 	public String getName() {
@@ -16,8 +18,21 @@ public class User {
 		this.age = age;
 	}
 	
+//	@Override
+	public int compareTo(User user) {
+		// TODO Auto-generated method stub
+		return user.getAge()-this.getAge();
+	}
+	
 	@Override
 	public String toString() {
 		return Integer.toString(age);
 	}
+//	@Override
+//	public int compareTo(Object o) {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
+	
+	
 }
