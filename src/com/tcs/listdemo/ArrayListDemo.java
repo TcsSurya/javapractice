@@ -4,14 +4,26 @@ import java.util.ArrayList;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class ArrayListDemo {
 	public static void main(String[] args) {
 		List<Integer> numbers = createList();
 		System.out.println(numbers);
 //		shortList(numbers);
-		filterList(numbers);
-		System.out.println("after sorging="+numbers);
+//		filterList(numbers);
+		add(numbers);
+//		System.out.println("after sorging="+numbers);
+	}
+	private static void add(List<Integer> numbers) {
+		Optional<Integer> sum1 = numbers.stream()
+				.reduce((Integer sum, Integer number)-> {
+					System.out.println(sum+" "+number);
+					return sum + number;
+				});
+		System.out.println(sum1.get());
+		// TODO Auto-generated method stub
+		
 	}
 	//method to filter elements
 	private static void filterList(List<Integer> numbers) {
@@ -19,6 +31,11 @@ public class ArrayListDemo {
 			System.out.println( number % 2 == 0);
 //			break;
 		});
+//		List<Integer> filtered = numbers.stream()
+//				.filter((number)-> number % 2 == 0)
+//				.collect(Collectors.toList());
+//			System.out.println(filtered);
+//		
 	
 		// TODO Auto-generated method stub
 		
